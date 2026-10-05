@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="pl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pasja z sercem – Ekskluzywne Kompozycje & Upominki</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%230f2e24'/><path d='M50 22 C35 38 35 62 50 78 C65 62 65 38 50 22 Z' fill='%23d4af66'/></svg>">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        emerald: {
+                            900: '#143e31',
+                            950: '#0f2e24',
+                        },
+                        gold: {
+                            400: '#d4af66',
+                            500: '#c5a059',
+                            600: '#b08b46',
+                            700: '#8c6c30'
+                        },
+                        cream: {
+                            50: '#fcfbf7',
+                            100: '#f6f4ed',
+                            200: '#eae6d9'
+                        },
+                        rose: {
+                            900: '#701d2e'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Cormorant Garamond', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        body {
+            background-color: #fcfbf7;
+            color: #1a1a1a;
+        }
+        
+        /* Subtle reveal animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Glassmorphism Navigation Header */
+        .glass-nav {
+            background: rgba(252, 251, 247, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        /* Gold Gradient Text */
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #c5a059 0%, #e5c888 50%, #b08b46 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Subtle Luxury Border Gradient */
+        .border-gold-glow {
+            border: 1px solid rgba(197, 160, 89, 0.3);
+        }
+        .border-gold-glow:hover {
+            border-color: rgba(197, 160, 89, 0.8);
+            box-shadow: 0 10px 30px -10px rgba(197, 160, 89, 0.25);
+        }
+
+        /* Image hover zoom effect */
+        .img-zoom {
+            transition: transform 0.7s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+        .img-container:hover .img-zoom {
+            transform: scale(1.06);
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #fcfbf7;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #0f2e24;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased selection:bg-gold-500 selection:text-white pb-24 md:pb-0">
+
+    <header class="fixed top-0 left-0 right-0 z-40 glass-nav border-b border-cream-200 transition-all duration-300">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center space-x-3 group">
+                <div class="w-10 h-10 rounded-full bg-emerald-950 border border-gold-500/40 flex items-center justify-center text-gold-400 group-hover:scale-105 transition-transform">
+                    <i class="fa-solid fa-seedling text-sm"></i>
+                </div>
+                <div>
+                    <span class="font-serif text-2xl font-bold tracking-tight text-emerald-950 block leading-none">Pasja z sercem</span>
+                    <span class="text-[10px] tracking-[0.2em] uppercase font-semibold text-gold-600 block mt-1">Kompozycje & Upominki</span>
+                </div>
+            </a>
+
+            <!-- Direct Quick Call Header Button -->
+            <div class="hidden sm:flex items-center space-x-4">
+                <a href="https://www.facebook.com/profile.php?id=61592259222266&locale=pl_PL" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-emerald-950 hover:text-gold-600 uppercase tracking-wider transition-colors px-3 py-2">
+                    <i class="fa-brands fa-facebook-f mr-1"></i> Facebook
+                </a>
+                <a href="tel:519068200" class="inline-flex items-center space-x-2 bg-emerald-950 hover:bg-emerald-900 text-gold-400 border border-gold-500/30 px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+                    <i class="fa-solid fa-phone text-xs"></i>
+                    <span>519 068 200</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section class="relative pt-36 pb-20 md:pt-48 md:pb-28 bg-gradient-to-b from-cream-100 via-cream-50 to-cream-50 overflow-hidden">
+        <!-- Background subtle decorative circle -->
+        <div class="absolute -top-32 -right-32 w-96 h-96 bg-gold-500/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute top-1/2 -left-32 w-80 h-80 bg-emerald-950/5 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-6xl mx-auto px-6 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Text Content -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left reveal">
+                    <div class="inline-flex items-center space-x-2 bg-emerald-950/5 border border-emerald-950/10 px-4 py-1.5 rounded-full text-emerald-950 text-xs font-semibold tracking-wider uppercase">
+                        <span class="w-2 h-2 rounded-full bg-gold-500 animate-pulse"></span>
+                        <span>Tworzone z pasją w doskonałej cenie</span>
+                    </div>
+
+                    <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-normal text-emerald-950 leading-[1.15]">
+                        Pasja z <span class="italic font-serif gold-gradient-text font-semibold">sercem</span>
+                    </h1>
+
+                    <p class="text-neutral-600 text-base sm:text-lg max-w-xl mx-auto lg:mx-0 font-light leading-relaxed">
+                        Wyjątkowe kompozycje nagrobne, eleganckie stroiki oraz niepowtarzalne upominki okolicznościowe. Unikalne wzornictwo i wysoka trwałość na każdą okazję.
+                    </p>
+
+                    <!-- CTAs -->
+                    <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 pt-4">
+                        <a href="tel:519068200" class="inline-flex items-center justify-center space-x-3 bg-emerald-950 hover:bg-emerald-900 text-white px-8 py-4 rounded-xl text-sm font-semibold uppercase tracking-wider shadow-xl transition-all border border-gold-500/30 group">
+                            <i class="fa-solid fa-phone text-gold-400 group-hover:rotate-12 transition-transform"></i>
+                            <span>Zadzwoń: 519 068 200</span>
+                        </a>
+                        
+                        <a href="https://www.facebook.com/profile.php?id=61592259222266&locale=pl_PL" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center space-x-3 bg-white hover:bg-cream-100 text-emerald-950 border border-cream-200 px-8 py-4 rounded-xl text-sm font-semibold uppercase tracking-wider shadow-md hover:shadow-lg transition-all">
+                            <i class="fa-brands fa-facebook text-[#1877F2]"></i>
+                            <span>Strona Facebook</span>
+                        </a>
+                    </div>
+
+                    <!-- Micro Highlights -->
+                    <div class="pt-6 border-t border-cream-200/80 grid grid-cols-3 gap-4 text-center lg:text-left">
+                        <div>
+                            <div class="font-serif text-2xl text-emerald-950 font-bold">100%</div>
+                            <div class="text-[11px] text-neutral-500 uppercase font-medium">Dbałość o detale</div>
+                        </div>
+                        <div>
+                            <div class="font-serif text-2xl text-gold-600 font-bold">Super</div>
+                            <div class="text-[11px] text-neutral-500 uppercase font-medium">Ceny na każdą kieszeń</div>
+                        </div>
+                        <div>
+                            <div class="font-serif text-2xl text-emerald-950 font-bold">Trwałość</div>
+                            <div class="text-[11px] text-neutral-500 uppercase font-medium">Solidne materiały</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Featured Image Cards -->
+                <div class="lg:col-span-5 relative reveal">
+                    <div class="relative mx-auto max-w-sm lg:max-w-none">
+                        <!-- Main Frame -->
+                        <div class="img-container relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white bg-cream-200 aspect-[4/5]">
+                            <img src="IMG_20260726_202417[1].jpg" alt="Kompozycja nagrobna Pasja z sercem" class="w-full h-full object-cover img-zoom" onerror="this.src='https://placehold.co/600x750/0f2e24/c5a059?text=Pasja+z+sercem'">
+                            <div class="absolute inset-0 bg-gradient-to-t from-emerald-950/80 via-transparent to-transparent flex flex-col justify-end p-6 text-white">
+                                <span class="text-gold-400 text-[10px] tracking-widest font-bold uppercase">Stroik Nagrobny</span>
+                                <h3 class="font-serif text-xl font-bold">Czerwone Chryzantemy & Róże</h3>
+                            </div>
+                        </div>
+
+                        <!-- Secondary Overlapping Badge -->
+                        <div class="absolute -bottom-6 -left-6 bg-white/95 backdrop-blur-md p-4 rounded-xl shadow-xl border border-gold-500/20 max-w-[220px]">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-10 h-10 rounded-lg bg-emerald-950 text-gold-400 flex items-center justify-center flex-shrink-0">
+                                    <i class="fa-solid fa-heart text-sm"></i>
+                                </div>
+                                <div>
+                                    <div class="text-xs font-bold text-emerald-950 leading-snug">Personalizacja</div>
+                                    <div class="text-[10px] text-neutral-500">Szybkie wykonanie na zamówienie</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="galeria" class="py-20 bg-cream-100/60 border-y border-cream-200">
+        <div class="max-w-6xl mx-auto px-6">
+            
+            <div class="text-center max-w-2xl mx-auto mb-10 reveal">
+                <span class="text-gold-600 text-xs font-bold uppercase tracking-[0.2em] block mb-2">Galeria prac</span>
+                <h2 class="font-serif text-3xl sm:text-4xl text-emerald-950 font-normal">Nasze Wybrane Realizacje</h2>
+                <p class="text-neutral-600 text-sm mt-3 font-light">Dotknij lub kliknij zdjęcie, aby zobaczyć je w pełnym rozmiarze.</p>
+            </div>
+
+            <!-- Category Filter Tabs -->
+            <div class="flex justify-center flex-wrap gap-2 mb-12 reveal">
+                <button onclick="filterGallery('all')" class="filter-btn active bg-emerald-950 text-white px-5 py-2 rounded-full text-xs font-semibold uppercase tracking-wider transition-all shadow-sm">
+                    Wszystkie
+                </button>
+                <button onclick="filterGallery('nagrobne')" class="filter-btn bg-white hover:bg-cream-50 text-emerald-950 px-5 py-2 rounded-full text-xs font-semibold uppercase tracking-wider transition-all border border-cream-200 shadow-sm">
+                    Kompozycje Nagrobne
+                </button>
+                <button onclick="filterGallery('upominki')" class="filter-btn bg-white hover:bg-cream-50 text-emerald-950 px-5 py-2 rounded-full text-xs font-semibold uppercase tracking-wider transition-all border border-cream-200 shadow-sm">
+                    Upominki & Bukiety
+                </button>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+                
+                <!-- Image Item 1 -->
+                <div class="gallery-item nagrobne img-container relative rounded-xl overflow-hidden shadow-md bg-white aspect-square cursor-pointer group border border-cream-200 reveal" onclick="openLightbox(0)">
+                    <img src="IMG_20260726_202417[1].jpg" alt="Kompozycja nagrobna bordo i róż" class="w-full h-full object-cover img-zoom" onerror="this.src='https://placehold.co/500x500/0f2e24/c5a059?text=Stroik+1'">
+                    <div class="absolute inset-0 bg-emerald-950/50 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-4 text-white">
+                        <span class="text-gold-400 text-[10px] font-bold uppercase">Stroik nagrobny</span>
+                        <span class="font-serif text-sm">Elegancja w Bordo</span>
+                    </div>
+                </div>
+
+                <!-- Image Item 2 -->
+                <div class="gallery-item nagrobne img-container relative rounded-xl overflow-hidden shadow-md bg-white aspect-square cursor-pointer group border border-cream-200 reveal" onclick="openLightbox(1)">
+                    <img src="IMG_20260726_202449.jpg" alt="Stroik z różami i hortensją" class="w-full h-full object-cover img-zoom" onerror="this.src='https://placehold.co/500x500/0f2e24/c5a059?text=Stroik+2'">
+                    <div class="absolute inset-0 bg-emerald-950/50 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-4 text-white">
+                        <span class="text-gold-400 text-[10px] font-bold uppercase">Stroik nagrobny</span>
+                        <span class="font-serif text-sm">Jasne Róże & Hortensje</span>
+                    </div>
+                </div>
+
+                <!-- Image Item 3 -->
+                <div class="gallery-item upominki img-container relative rounded-xl overflow-hidden shadow-md bg-white aspect-square cursor-pointer group border border-cream-200 reveal" onclick="openLightbox(2)">
+                    <img src="IMG_20260726_202657[1].jpg" alt="Bukiet żółtych lilii" class="w-full h-full object-cover img-zoom" onerror="this.src='https://placehold.co/500x500/0f2e24/c5a059?text=Lilie'">
+                    <div class="absolute inset-0 bg-emerald-950/50 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-4 text-white">
+                        <span class="text-gold-400 text-[10px] font-bold uppercase">Bukiet okazjonalny</span>
+                        <span class="font-serif text-sm">Słoneczne Lilie</span>
+                    </div>
+                </div>
+
+                <!-- Image Item 4 -->
+                <div class="gallery-item upominki img-container relative rounded-xl overflow-hidden shadow-md bg-white aspect-square cursor-pointer group border border-cream-200 reveal" onclick="openLightbox(3)">
+                    <img src="IMG_20260726_202843.jpg" alt="Bukiet niebieskich irysów" class="w-full h-full object-cover img-zoom" onerror="this.src='https://placehold.co/500x500/0f2e24/c5a059?text=Irysy'">
+                    <div class="absolute inset-0 bg-emerald-950/50 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-4 text-white">
+                        <span class="text-gold-400 text-[10px] font-bold uppercase">Bukiet okazjonalny</span>
+                        <span class="font-serif text-sm">Niebieski Irys & Róże</span>
+                    </div>
+                </div>
+
+                <!-- Image Item 5 -->
+                <div class="gallery-item nagrobne img-container relative rounded-xl overflow-hidden shadow-md bg-white aspect-square cursor-pointer group border border-cream-200 reveal" onclick="openLightbox(4)">
+                    <img src="IMG_20260726_202912.jpg" alt="Kompozycja nagrobna karminowa" class="w-full h-full object-cover img-zoom" onerror="this.src='https://placehold.co/500x500/0f2e24/c5a059?text=Kompozycja'">
+                    <div class="absolute inset-0 bg-emerald-950/50 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-4 text-white">
+                        <span class="text-gold-400 text-[10px] font-bold uppercase">Stroik nagrobny</span>
+                        <span class="font-serif text-sm">Karminowe Piwonie</span>
+                    </div>
+                </div>
+
+                <!-- Image Item 6 -->
+                <div class="gallery-item upominki img-container relative rounded-xl overflow-hidden shadow-md bg-white aspect-square cursor-pointer group border border-cream-200 reveal" onclick="openLightbox(5)">
+                    <img src="IMG_20260726_203033.jpg" alt="Kosz upominkowy na urodziny" class="w-full h-full object-cover img-zoom" onerror="this.src='https://placehold.co/500x500/0f2e24/c5a059?text=Upominek'">
+                    <div class="absolute inset-0 bg-emerald-950/50 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-4 text-white">
+                        <span class="text-gold-400 text-[10px] font-bold uppercase">Kosz prezentowy</span>
+                        <span class="font-serif text-sm">Urodzinowy Słodki Box</span>
+                    </div>
+                </div>
+
+                <!-- Image Item 7 -->
+                <div class="gallery-item nagrobne img-container relative rounded-xl overflow-hidden shadow-md bg-white aspect-square cursor-pointer group border border-cream-200 reveal" onclick="openLightbox(6)">
+                    <img src="IMG_20260925_180846.jpg" alt="Komplet kompozycji nagrobnych" class="w-full h-full object-cover img-zoom" onerror="this.src='https://placehold.co/500x500/0f2e24/c5a059?text=Komplet'">
+                    <div class="absolute inset-0 bg-emerald-950/50 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-4 text-white">
+                        <span class="text-gold-400 text-[10px] font-bold uppercase">Komplet nagrobny</span>
+                        <span class="font-serif text-sm">Storczyk & Fiolety</span>
+                    </div>
+                </div>
+
+                <!-- Image Item 8 -->
+                <div class="gallery-item upominki img-container relative rounded-xl overflow-hidden shadow-md bg-white aspect-square cursor-pointer group border border-cream-200 reveal" onclick="openLightbox(7)">
+                    <img src="IMG20260726201150.jpg" alt="Bukiet z błękitną hortensją" class="w-full h-full object-cover img-zoom" onerror="this.src='https://placehold.co/500x500/0f2e24/c5a059?text=Bukiet+2'">
+                    <div class="absolute inset-0 bg-emerald-950/50 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-4 text-white">
+                        <span class="text-gold-400 text-[10px] font-bold uppercase">Bukiet florystyczny</span>
+                        <span class="font-serif text-sm">Błękitna Hortensja</span>
+                    </div>
+                </div>
+
+                <!-- Image Item 9 -->
+                <div class="gallery-item nagrobne img-container relative rounded-xl overflow-hidden shadow-md bg-white aspect-square cursor-pointer group border border-cream-200 reveal" onclick="openLightbox(8)">
+                    <img src=".trashed-1791882577-IMG20260913110843.jpg" alt="Bordowy stroik z magnolią" class="w-full h-full object-cover img-zoom" onerror="this.src='https://placehold.co/500x500/0f2e24/c5a059?text=Stroik+3'">
+                    <div class="absolute inset-0 bg-emerald-950/50 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-4 text-white">
+                        <span class="text-gold-400 text-[10px] font-bold uppercase">Stroik nagrobny</span>
+                        <span class="font-serif text-sm">Bordowa Magnolia</span>
+                    </div>
+                </div>
+
+                <!-- Image Item 10 -->
+                <div class="gallery-item nagrobne img-container relative rounded-xl overflow-hidden shadow-md bg-white aspect-square cursor-pointer group border border-cream-200 reveal" onclick="openLightbox(9)">
+                    <img src=".trashed-1791891700-IMG20260913134015.jpg" alt="Luksusowa kompozycja nagrobna" class="w-full h-full object-cover img-zoom" onerror="this.src='https://placehold.co/500x500/0f2e24/c5a059?text=Stroik+4'">
+                    <div class="absolute inset-0 bg-emerald-950/50 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-4 text-white">
+                        <span class="text-gold-400 text-[10px] font-bold uppercase">Kompozycja nagrobna</span>
+                        <span class="font-serif text-sm">Zielony Storczyk & Protea</span>
+                    </div>
+                </div>
+
+                <!-- Image Item 11 -->
+                <div class="gallery-item upominki img-container relative rounded-xl overflow-hidden shadow-md bg-white aspect-square cursor-pointer group border border-cream-200 reveal" onclick="openLightbox(10)">
+                    <img src="IMG_20230325_192140.jpg" alt="Wielkanocny Zajączek" class="w-full h-full object-cover img-zoom" onerror="this.src='https://placehold.co/500x500/0f2e24/c5a059?text=Upominek'">
+                    <div class="absolute inset-0 bg-emerald-950/50 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-4 text-white">
+                        <span class="text-gold-400 text-[10px] font-bold uppercase">Dekoracja Świąteczna</span>
+                        <span class="font-serif text-sm">Wielkanocny Zajączek</span>
+                    </div>
+                </div>
+
+                <!-- Image Item 12 -->
+                <div class="gallery-item upominki img-container relative rounded-xl overflow-hidden shadow-md bg-white aspect-square cursor-pointer group border border-cream-200 reveal" onclick="openLightbox(11)">
+                    <img src="IMG_20230330_212641.jpg" alt="Wesołego Alleluja" class="w-full h-full object-cover img-zoom" onerror="this.src='https://placehold.co/500x500/0f2e24/c5a059?text=Upominek'">
+                    <div class="absolute inset-0 bg-emerald-950/50 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-4 text-white">
+                        <span class="text-gold-400 text-[10px] font-bold uppercase">Dekoracja W Szkle</span>
+                        <span class="font-serif text-sm">Wesołego Alleluja</span>
+                    </div>
+                </div>
+
+                <!-- Image Item 13 -->
+                <div class="gallery-item upominki img-container relative rounded-xl overflow-hidden shadow-md bg-white aspect-square cursor-pointer group border border-cream-200 reveal" onclick="openLightbox(12)">
+                    <img src="IMG_20230622_165342.jpg" alt="Zestaw Prezentowy Premium" class="w-full h-full object-cover img-zoom" onerror="this.src='https://placehold.co/500x500/0f2e24/c5a059?text=Upominek'">
+                    <div class="absolute inset-0 bg-emerald-950/50 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-4 text-white">
+                        <span class="text-gold-400 text-[10px] font-bold uppercase">Kosz Prezentowy</span>
+                        <span class="font-serif text-sm">Zestaw Premium</span>
+                    </div>
+                </div>
+
+                <!-- Image Item 14 -->
+                <div class="gallery-item upominki img-container relative rounded-xl overflow-hidden shadow-md bg-white aspect-square cursor-pointer group border border-cream-200 reveal" onclick="openLightbox(13)">
+                    <img src="IMG_20240316_120808.jpg" alt="Wiosenne Gniazdko" class="w-full h-full object-cover img-zoom" onerror="this.src='https://placehold.co/500x500/0f2e24/c5a059?text=Upominek'">
+                    <div class="absolute inset-0 bg-emerald-950/50 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-4 text-white">
+                        <span class="text-gold-400 text-[10px] font-bold uppercase">Rękodzieło</span>
+                        <span class="font-serif text-sm">Wiosenne Gniazdko</span>
+                    </div>
+                </div>
+
+                <!-- Image Item 15 -->
+                <div class="gallery-item upominki img-container relative rounded-xl overflow-hidden shadow-md bg-white aspect-square cursor-pointer group border border-cream-200 reveal" onclick="openLightbox(14)">
+                    <img src="IMG_20241206_005856.jpg" alt="Stroik Bożonarodzeniowy" class="w-full h-full object-cover img-zoom" onerror="this.src='https://placehold.co/500x500/0f2e24/c5a059?text=Upominek'">
+                    <div class="absolute inset-0 bg-emerald-950/50 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-4 text-white">
+                        <span class="text-gold-400 text-[10px] font-bold uppercase">Dekoracja Świąteczna</span>
+                        <span class="font-serif text-sm">Magia Świąt</span>
+                    </div>
+                </div>
+
+                <!-- Image Item 16 -->
+                <div class="gallery-item upominki img-container relative rounded-xl overflow-hidden shadow-md bg-white aspect-square cursor-pointer group border border-cream-200 reveal" onclick="openLightbox(15)">
+                    <img src="IMG_20260723_134039.jpg" alt="Słodki Box Ferrero" class="w-full h-full object-cover img-zoom" onerror="this.src='https://placehold.co/500x500/0f2e24/c5a059?text=Upominek'">
+                    <div class="absolute inset-0 bg-emerald-950/50 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-4 text-white">
+                        <span class="text-gold-400 text-[10px] font-bold uppercase">Słodki Upominek</span>
+                        <span class="font-serif text-sm">Czekoladowy Box</span>
+                    </div>
+                </div>
+
+                <!-- Image Item 17 -->
+                <div class="gallery-item upominki img-container relative rounded-xl overflow-hidden shadow-md bg-white aspect-square cursor-pointer group border border-cream-200 reveal" onclick="openLightbox(16)">
+                    <img src="IMG_20260723_142645.jpg" alt="Flowerbox Urodzinowy" class="w-full h-full object-cover img-zoom" onerror="this.src='https://placehold.co/500x500/0f2e24/c5a059?text=Upominek'">
+                    <div class="absolute inset-0 bg-emerald-950/50 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-4 text-white">
+                        <span class="text-gold-400 text-[10px] font-bold uppercase">Kosz Kwiatowy</span>
+                        <span class="font-serif text-sm">Flowerbox W Dniu Urodzin</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="kontakt" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="bg-emerald-950 rounded-3xl p-8 sm:p-12 md:p-16 text-white shadow-2xl relative overflow-hidden border border-gold-500/30 reveal">
+                <!-- Decorative background elements -->
+                <div class="absolute top-0 right-0 w-80 h-80 bg-gold-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+                <div class="relative z-10 text-center space-y-8">
+                    <div>
+                        <span class="text-gold-400 text-xs font-bold uppercase tracking-[0.2em] block mb-2">Bezpośredni Kontakt</span>
+                        <h2 class="font-serif text-3xl sm:text-5xl font-normal">Pasja z sercem</h2>
+                        <p class="text-cream-200/80 text-sm mt-3 max-w-lg mx-auto font-light">
+                            Złóż zamówienie telefonicznie lub napisz do nas wiadomość prywatną na profilu Facebook. Chętnie odpowiemy na wszystkie pytania.
+                        </p>
+                    </div>
+
+                    <!-- Contact Details Card -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto">
+                        <!-- Phone Box -->
+                        <a href="tel:519068200" class="flex flex-col items-center justify-center p-6 rounded-2xl bg-white/5 hover:bg-white/10 border border-gold-500/20 transition-all group">
+                            <div class="w-12 h-12 rounded-full bg-gold-500 text-emerald-950 flex items-center justify-center text-xl mb-3 shadow-md group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <span class="text-xs text-gold-400 font-semibold uppercase tracking-wider">Telefon</span>
+                            <span class="text-xl sm:text-2xl font-bold font-serif text-white mt-1">519 068 200</span>
+                        </a>
+
+                        <!-- Facebook Box -->
+                        <a href="https://www.facebook.com/profile.php?id=61592259222266&locale=pl_PL" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center justify-center p-6 rounded-2xl bg-white/5 hover:bg-white/10 border border-gold-500/20 transition-all group">
+                            <div class="w-12 h-12 rounded-full bg-[#1877F2] text-white flex items-center justify-center text-xl mb-3 shadow-md group-hover:scale-110 transition-transform">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </div>
+                            <span class="text-xs text-gold-400 font-semibold uppercase tracking-wider">Facebook</span>
+                            <span class="text-lg font-bold font-serif text-white mt-1">Pasja z sercem</span>
+                        </a>
+                    </div>
+
+                    <div class="pt-4 border-t border-white/10 text-xs text-cream-200/60 font-light">
+                        Kompozycje nagrobne • Upominki okazjonalne • Bukiety • Wszystko w dobrej cenie
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-cream-50 text-center text-xs text-neutral-500 border-t border-cream-200">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="font-serif text-sm font-bold text-emerald-950">Pasja z sercem</div>
+            <div>&copy; 2026 Pasja z sercem. Wszelkie prawa zastrzeżone.</div>
+        </div>
+    </footer>
+
+    <div class="fixed bottom-0 left-0 right-0 z-50 bg-emerald-950/95 backdrop-blur-md border-t border-gold-500/30 p-3 sm:hidden flex items-center justify-between gap-3 shadow-2xl">
+        <a href="tel:519068200" class="flex-1 bg-gold-500 hover:bg-gold-600 text-emerald-950 py-3 rounded-xl font-bold text-xs uppercase tracking-wider text-center flex items-center justify-center space-x-2 shadow-lg">
+            <i class="fa-solid fa-phone"></i>
+            <span>Zadzwoń teraz</span>
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=61592259222266&locale=pl_PL" target="_blank" rel="noopener noreferrer" class="flex-1 bg-[#1877F2] text-white py-3 rounded-xl font-bold text-xs uppercase tracking-wider text-center flex items-center justify-center space-x-2 shadow-lg">
+            <i class="fa-brands fa-facebook-f"></i>
+            <span>Napisz na FB</span>
+        </a>
+    </div>
+
+    <div id="lightbox" class="fixed inset-0 z-50 bg-black/95 hidden flex-col items-center justify-between p-4 sm:p-8">
+        <!-- Lightbox Controls -->
+        <div class="w-full flex items-center justify-between max-w-5xl text-white">
+            <span id="lightbox-counter" class="text-xs font-semibold uppercase tracking-widest text-gold-400">1 / 17</span>
+            <button onclick="closeLightbox()" class="text-white hover:text-gold-400 text-2xl p-2 transition-colors">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <!-- Main Display Image -->
+        <div class="relative max-w-4xl max-h-[75vh] w-full flex items-center justify-center my-auto">
+            <button onclick="prevImage()" class="absolute left-2 sm:-left-12 text-white hover:text-gold-400 text-3xl p-3 z-10 transition-colors">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <img id="lightbox-img" src="" alt="Zdjęcie z galerii" class="max-h-[75vh] max-w-full object-contain rounded-xl shadow-2xl border border-white/10">
+            <button onclick="nextImage()" class="absolute right-2 sm:-right-12 text-white hover:text-gold-400 text-3xl p-3 z-10 transition-colors">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+        </div>
+
+        <!-- Image Caption -->
+        <div class="text-center text-white pb-4">
+            <h4 id="lightbox-title" class="font-serif text-xl text-gold-400"></h4>
+            <p id="lightbox-desc" class="text-xs text-neutral-400 font-light mt-1"></p>
+        </div>
+    </div>
+
+    <script>
+        // Gallery items dataset
+        const galleryItems = [
+            { src: 'IMG_20260726_202417[1].jpg', title: 'Czerwone Chryzantemy & Róże', desc: 'Ekskluzywny stroik nagrobny w odcieniach bordo i złota' },
+            { src: 'IMG_20260726_202449.jpg', title: 'Jasne Róże & Hortensje', desc: 'Klasyczna kompozycja nagrobna w subtelnej kolorystyce' },
+            { src: 'IMG_20260726_202657[1].jpg', title: 'Słoneczne Lilie', desc: 'Bogaty bukiet okazjonalny z wyrazistymi liliami' },
+            { src: 'IMG_20260726_202843.jpg', title: 'Niebieski Irys & Róże', desc: 'Oryginalna kompozycja florystyczna na prezent lub rocznicę' },
+            { src: 'IMG_20260726_202912.jpg', title: 'Karminowe Piwonie', desc: 'Elegancka dekoracja w głębokiej tonacji różu' },
+            { src: 'IMG_20260726_203033.jpg', title: 'Urodzinowy Słodki Box', desc: 'Okolicznościowy kosz prezentowy ze słodyczami' },
+            { src: 'IMG_20260925_180846.jpg', title: 'Komplet Nagrobny Storczyk', desc: 'Kompleksowy zestaw stroików na pomnik' },
+            { src: 'IMG20260726201150.jpg', title: 'Błękitna Hortensja', desc: 'Wyszukany bukiet florystyczny z pastelowymi akcentami' },
+            { src: '.trashed-1791882577-IMG20260913110843.jpg', title: 'Bordowa Magnolia', desc: 'Ciepły stroik nagrobny o wysokiej trwałości' },
+            { src: '.trashed-1791891700-IMG20260913134015.jpg', title: 'Zielony Storczyk & Protea', desc: 'Nowoczesny i bogaty stroik nagrobny' },
+            { src: 'IMG_20230325_192140.jpg', title: 'Wielkanocny Zajączek', desc: 'Ręcznie robiona dekoracja wielkanocna z zajączkiem i kolorową pisanką' },
+            { src: 'IMG_20230330_212641.jpg', title: 'Wesołego Alleluja', desc: 'Wiosenna kompozycja w szkle z wielkanocnym kurczaczkiem' },
+            { src: 'IMG_20230622_165342.jpg', title: 'Zestaw Prezentowy Premium', desc: 'Elegancki box prezentowy z butelką i czekoladkami' },
+            { src: 'IMG_20240316_120808.jpg', title: 'Wiosenne Gniazdko', desc: 'Rękodzieło wielkanocne w formie ażurowego jajka z kurczaczkami' },
+            { src: 'IMG_20241206_005856.jpg', title: 'Magia Świąt', desc: 'Świąteczna kompozycja z reniferem i bombkami' },
+            { src: 'IMG_20260723_134039.jpg', title: 'Czekoladowy Box', desc: 'Uroczy upominek ze słodyczami w eleganckiej oprawie z celofanu' },
+            { src: 'IMG_20260723_142645.jpg', title: 'Flowerbox W Dniu Urodzin', desc: 'Piękny flowerbox z mydlanymi różami i topperem urodzinowym' }
+        ];
+
+        let currentImgIndex = 0;
+
+        function openLightbox(index) {
+            currentImgIndex = index;
+            updateLightboxContent();
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.remove('hidden');
+            lightbox.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.remove('flex');
+            lightbox.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        function updateLightboxContent() {
+            const item = galleryItems[currentImgIndex];
+            document.getElementById('lightbox-img').src = item.src;
+            document.getElementById('lightbox-title').textContent = item.title;
+            document.getElementById('lightbox-desc').textContent = item.desc;
+            document.getElementById('lightbox-counter').textContent = `${currentImgIndex + 1} / ${galleryItems.length}`;
+        }
+
+        function nextImage() {
+            currentImgIndex = (currentImgIndex + 1) % galleryItems.length;
+            updateLightboxContent();
+        }
+
+        function prevImage() {
+            currentImgIndex = (currentImgIndex - 1 + galleryItems.length) % galleryItems.length;
+            updateLightboxContent();
+        }
+
+        // Close lightbox on backdrop click
+        document.getElementById('lightbox').addEventListener('click', function(e) {
+            if (e.target === this) closeLightbox();
+        });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            const lightbox = document.getElementById('lightbox');
+            if (!lightbox.classList.contains('hidden')) {
+                if (e.key === 'Escape') closeLightbox();
+                if (e.key === 'ArrowRight') nextImage();
+                if (e.key === 'ArrowLeft') prevImage();
+            }
+        });
+
+        // Category Filtering Logic
+        function filterGallery(category) {
+            const buttons = document.querySelectorAll('.filter-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-emerald-950', 'text-white');
+                btn.classList.add('bg-white', 'text-emerald-950');
+            });
+
+            event.currentTarget.classList.remove('bg-white', 'text-emerald-950');
+            event.currentTarget.classList.add('bg-emerald-950', 'text-white');
+
+            const items = document.querySelectorAll('.gallery-item');
+            items.forEach(item => {
+                if (category === 'all') {
+                    item.style.display = 'block';
+                } else {
+                    if (item.classList.contains(category)) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                }
+            });
+        }
+
+        // Intersection Observer for Reveal Scroll Animations
+        document.addEventListener("DOMContentLoaded", function() {
+            const reveals = document.querySelectorAll(".reveal");
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("active");
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            reveals.forEach(reveal => observer.observe(reveal));
+        });
+    </script>
+</body>
+</html>
